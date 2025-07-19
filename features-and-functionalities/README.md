@@ -1,25 +1,22 @@
-# alx-airbnb-project-documentation
-# Airbnb Clone Backend - Features and Functionalities
+# Features and Functionalities — Airbnb Clone Backend
 
-This directory contains a diagram and documentation of the key backend features and functionalities required for the Airbnb clone project.
+## 📄 Objective
 
-## Features Overview
+This document presents the **features and functionalities** of the Airbnb Clone backend system.  
+The corresponding diagram illustrates the main components and capabilities that the backend must support.
 
-- **User Authentication & Authorization**
-- **User Management**
-- **Property Management**
-- **Booking System**
-- **Payment Processing**
-- **Reviews and Ratings**
-- **Messaging System**
-- **Audit and Logging**
+The key modules include:
 
-## Diagram
+- User authentication and authorization
+- User profile management
+- Property management for hosts
+- Booking system for guests
+- Payment processing
+- Messaging between users
+- Reviews and ratings
+- Audit logging
 
-The diagram `features.png` visually represents these features, their relationships, and workflows in the backend system.
+## 🖼️ Diagram
 
----
+The diagram file is stored as:
 
-## Usage
-
-View the PNG diagram for a detailed visualization of the system capabilities. This documentation helps guide development and ensures all critical backend functionalities are accounted for.
