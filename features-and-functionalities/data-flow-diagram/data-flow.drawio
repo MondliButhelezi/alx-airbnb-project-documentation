@@ -1,0 +1,108 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Improved Data Flow Diagram">
+    <mxGraphModel dx="850" dy="400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- External Entities -->
+        <mxCell id="guest" value="Guest" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="host" value="Host" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="admin" value="Admin" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="80" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Processes -->
+        <mxCell id="register" value="Register/Login" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="property" value="Manage Properties" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="200" y="160" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="booking" value="Manage Bookings" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="200" y="220" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="payment" value="Process Payments" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="200" y="280" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="message" value="Messaging" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="200" y="340" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="review" value="Leave Reviews" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="200" y="400" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Data Stores -->
+        <mxCell id="users" value="Users" style="shape=database;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="420" y="100" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="properties" value="Properties" style="shape=database;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="420" y="160" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="bookings" value="Bookings" style="shape=database;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="420" y="220" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="payments" value="Payments" style="shape=database;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="420" y="280" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="messages" value="Messages" style="shape=database;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="420" y="340" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="reviews" value="Reviews" style="shape=database;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="420" y="400" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Data Flows -->
+        <mxCell style="endArrow=block;html=1;" edge="1" parent="1" source="guest" target="register">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell style="endArrow=block;html=1;" edge="1" parent="1" source="register" target="users">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell style="endArrow=block;html=1;" edge="1" parent="1" source="host" target="register">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell style="endArrow=block;html=1;" edge="1" parent="1" source="host" target="property">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell style="endArrow=block;html=1;" edge="1" parent="1" source="property" target="properties">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell style="endArrow=block;html=1;" edge="1" parent="1" source="guest" target="booking">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell style="endArrow=block;html=1;" edge="1" parent="1" source="booking" target="bookings">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell style="endArrow=block;html=1;" edge="1" parent="1" source="guest" target="payment">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell style="endArrow=block;html=1;" edge="1" parent="1" source="payment" target="payments">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell style="endArrow=block;html=1;" edge="1" parent="1" source="guest" target="message">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell style="endArrow=block;html=1;" edge="1" parent="1" source="message" target="messages">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell style="endArrow=block;html=1;" edge="1" parent="1" source="guest" target="review">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell style="endArrow=block;html=1;" edge="1" parent="1" source="review" target="reviews">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
